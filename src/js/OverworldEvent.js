@@ -5,6 +5,8 @@ class OverworldEvent {
     this.event = event;
   }
 
+  // Most of the  behavior methods below has a resolver which can tell the system when the event is done.After an event is complete
+  //we can call the resolve() which will resolve the promise that we are waiting for on await keyword
   stand(resolve) {
     const who = this.map.gameObjects[this.event.who];
     who.startBehavior(
@@ -18,7 +20,7 @@ class OverworldEvent {
       }
     );
 
-    //Set up a handler to complete when correct person is done walking, then resolve the event
+    //Set up a handler to complete when correct person is done walking, then resolve the event.
     const completeHandler = (e) => {
       if (e.detail.whoId === this.event.who) {
         document.removeEventListener("PersonStandComplete", completeHandler);
