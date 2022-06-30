@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --border-color: #291d4d;
+  --dialog-background: #fff3b4;
+
+  --menu-background: #ffe8d2;
+  --menu-border-color: #a48465;
+  --menu-font-color: #3a160d;
+  --menu-selected-background: #7fc2ff;
+}
+
+body {
+  background: #333;
+  overflow: hidden;
+  font-family: "Ribeye", cursive;
+}
+.how-to-play {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+
+.game-container {
+  position: relative;
+  background: #d9f4ff;
+  width: 352px;
+  height: 198px;
+  margin: 0 auto;
+  outline: 1px solid #fff;
+
+  transform: scale(3) translateY(50%);
+}
+
+.game-container canvas {
+  image-rendering: pixelated;
+}
+.Hud {
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  image-rendering: pixelated;
+}
+
+.Hud .Combatant {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.Hud .Combatant_type {
+  display: none;
+}

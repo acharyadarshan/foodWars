@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food Wars</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Overworld styles -->
+    <link href="css/global.css" type="text/css" rel="stylesheet" />
+    <link href="css/textMessage.css" type="text/css" rel="stylesheet" />
+    <link href="css/sceneTransition.css" type="text/css" rel="stylesheet" />
+    <link href="css/keyboardMenu.css" type="text/css" rel="stylesheet" />
+    <link href="css/titleScreen.css" type="text/css" rel="stylesheet" />
+    <!-- Battle css -->
+    <link href="css/battle.css" type="text/css" rel="stylesheet" />
+    <link href="css/combatant.css" type="text/css" rel="stylesheet" />
+    <link href="css/team.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="game-container">
+      <canvas class="game-canvas" width="352" height="198"></canvas>
+    </div>
+    <p class="how-to-play">Use Arrow Keys to move. Enter to prompt/talk.</p>
+
+    <!-- Content -->
+    <script src="js/content/pizzas.js"></script>
+    <script src="js/content/actions.js"></script>
+    <script src="js/content/enemies.js"></script>
+
+    <!-- State -->
+    <script src="js/state/PlayerState.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/DirectionInput.js"></script>
+    <script src="js/Overworld.js"></script>
+    <script src="js/GameObject.js"></script>
+    <script src="js/Person.js"></script>
+    <script src="js/Sprite.js"></script>
+    <script src="js/OverworldMap.js"></script>
+    <script src="js/OverworldEvent.js"></script>
+    <script src="js/TextMessage.js"></script>
+    <script src="js/KeyPressListener.js"></script>
+    <script src="js/RevealingText.js"></script>
+    <script src="js/SceneTransition.js"></script>
+    <script src="js/KeyboardMenu.js"></script>
+    <script src="js/Hud.js"></script>
+    <script src="js/CraftingMenu.js"></script>
+    <script src="js/Progress.js"></script>
+    <script src="js/TitleScreen.js"></script>
+
+    <!-- Battle -->
+    <script src="js/battle/Battle.js"></script>
+    <script src="js/battle/Combatant.js"></script>
+    <script src="js/battle/ReplacementMenu.js"></script>
+    <script src="js/battle/BattleEvent.js"></script>
+    <script src="js/battle/TurnCycle.js"></script>
+    <script src="js/battle/BattleAnimations.js"></script>
+
+    <script src="js/init.js"></script>
+  </body>
+</html>
