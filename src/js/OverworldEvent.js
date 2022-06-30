@@ -5,8 +5,9 @@ class OverworldEvent {
     this.event = event;
   }
 
-  // Most of the  behavior methods below has a resolver which can tell the system when the event is done.After an event is complete
+  // Most of the  behavior methods  below has a resolver which can tell the system  the event is done.After an event is completed
   //we can call the resolve() which will resolve the promise that we are waiting for on await keyword
+
   stand(resolve) {
     const who = this.map.gameObjects[this.event.who];
     who.startBehavior(
@@ -121,6 +122,7 @@ class OverworldEvent {
     menu.init(document.querySelector(".game-container"));
   }
 
+  // this.event.type may be walk or stand , so this.event.type refers to walk(resolve) , mixing functional based style here on object based style
   init() {
     return new Promise((resolve) => {
       this[this.event.type](resolve);
