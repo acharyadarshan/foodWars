@@ -96,6 +96,7 @@ class OverworldMap {
   removeWall(x, y) {
     delete this.walls[`${x},${y}`];
   }
+  // movewall basically moves the position of wall dynamically as the npc character moves
   moveWall(wasX, wasY, direction) {
     this.removeWall(wasX, wasY);
     const { x, y } = utils.nextPosition(wasX, wasY, direction);
