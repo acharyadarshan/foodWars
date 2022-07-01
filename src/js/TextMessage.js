@@ -44,6 +44,7 @@ class TextMessage {
   init(container) {
     this.createElement();
     container.appendChild(this.element);
+
     this.revealingText.init();
   }
 }
