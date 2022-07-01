@@ -35,7 +35,7 @@ class Progress {
     return response;
   }
 
-  //fetch previously saved gamestate from backedn
+  //fetch previously saved gamestate from backend
   async getSaveFile() {
     const response = await fetch(`./gamestate/${this.saveFileKey}`);
     let state = await response.json();

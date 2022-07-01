@@ -1,3 +1,4 @@
+//HUD refers to head up display you see in games, xp level lives etc
 class Hud {
   constructor() {
     this.scoreboards = [];

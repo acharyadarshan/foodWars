@@ -1,3 +1,4 @@
+// This class triggers to draw map on a scene and also controls the trigger for overworld event class
 class Overworld {
   constructor(config) {
     this.element = config.element;

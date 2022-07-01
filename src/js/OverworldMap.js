@@ -1,4 +1,8 @@
-// All the grid coordinates are calculated using asprite editor
+/***
+ * All the grid coordinates  below are calculated using asprite editor, which makes it easy to view anycordinate position for object you want to place in a screen
+ * ***/
+
+// This class contains all the necessary details of npc and game objects, and hero player. and methods for cutscenes and transition between maps
 class OverworldMap {
   constructor(config) {
     this.overworld = null;
@@ -65,6 +69,8 @@ class OverworldMap {
     this.isCutscenePlaying = false;
   }
 
+  // To start cutscenes when hero player faces the npc objects - if it finds a match , then it triggers talking or specific relevant scenario context
+
   checkForActionCutscene() {
     const hero = this.gameObjects["hero"];
     const nextCoords = utils.nextPosition(hero.x, hero.y, hero.direction);
@@ -80,6 +86,8 @@ class OverworldMap {
       relevantScenario && this.startCutscene(relevantScenario.events);
     }
   }
+
+  // to check if the cordinate postion player has stepped triggers the transition scenario to another map
 
   checkForFootstepCutscene() {
     const hero = this.gameObjects["hero"];
