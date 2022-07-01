@@ -45,6 +45,7 @@ const utils = {
     return array[Math.floor(Math.random() * array.length)];
   },
 
+  // this is a native browser built in custom event which takes in custom params, detail is a keyword that is used to pass that custom data
   emitEvent(name, detail) {
     const event = new CustomEvent(name, {
       detail,
