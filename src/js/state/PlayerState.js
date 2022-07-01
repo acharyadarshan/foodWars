@@ -20,7 +20,8 @@ class PlayerState {
     ];
     this.storyFlags = {};
   }
-
+  //date.now is changing every mili seconds and adding a random number just gives two different timestamps, so even when called at same instance two diffe
+  //results appear
   addPizza(pizzaId) {
     const newId = `p${Date.now()}` + Math.floor(Math.random() * 99999);
     this.pizzas[newId] = {
@@ -44,6 +45,7 @@ class PlayerState {
     utils.emitEvent("LineupChanged");
   }
 
+  // swapped pizza gets moved to the front
   moveToFront(futureFrontId) {
     this.lineup = this.lineup.filter((id) => id !== futureFrontId);
     this.lineup.unshift(futureFrontId);
