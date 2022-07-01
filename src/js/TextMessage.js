@@ -34,6 +34,7 @@ class TextMessage {
   done() {
     if (this.revealingText.isDone) {
       this.element.remove();
+      // helps to complete the text immediatelt when enter key is entered
       this.actionListener.unbind();
       this.onComplete();
     } else {
